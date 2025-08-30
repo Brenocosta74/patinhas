@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="styles.css">
+  <title>Patinhas &amp; Cia</title>
+  <meta name="description" content="Comunidade gratuita dedicada aos cuidados de cães: guias, adoção, mapa de serviços e fórum." />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2T0vY7k7gq0XkYh0y5b2w6YbY1bYk2Jg2qj0Q4c=" crossorigin=""/>
+</head>
+<body>
+  <header class="container">
+    <div class="brand">
+      <div class="logo">🐾</div>
+      <div>
+        <strong>Patinhas &amp; Cia</strong><br/>
+        <small class="muted">Cuidar é um ato de amor</small>
+      </div>
+    </div>
+    <nav>
+      <a href="#guias">Guias</a>
+      <a href="#adocao">Adoção</a>
+      <a href="#mapa">Serviços</a>
+      <a href="#comunidade">Comunidade</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div class="hero-card">
+        <h1>Bem-vindo ao Patinhas &amp; Cia</h1>
+        <p>Aqui é um espaço feito com <em>carinho</em> para quem ama, cuida ou quer aprender a cuidar melhor dos cachorros. Conteúdo gratuito e acessível.</p>
+        <div class="cta-row">
+          <button class="btn" onclick="location.href='#guias'">Dicas &amp; Guias</button>
+          <button class="btn ghost" onclick="location.href='#adocao'">Adote um amigo</button>
+        </div>
+
+        <div class="grid" style="margin-top:18px">
+          <div class="card"><h3>Guias Práticos</h3><p class="small">Alimentação, higiene, saúde e adestramento — passos simples para cuidar melhor.</p></div>
+          <div class="card"><h3>Adoção Responsável</h3><p class="small">Processo seguro, ONGs parceiras e como ser lar temporário.</p></div>
+          <div class="card"><h3>Comunidade</h3><p class="small">Fórum, histórias e apoio a protetores.</p></div>
+          <div class="card"><h3>Mapa de Serviços</h3><p class="small">Clínicas, pet shops e locais pet-friendly perto de você.</p></div>
+        </div>
+      </div>
+
+      <aside class="hero-card">
+        <h3>Nosso Compromisso</h3>
+        <ul class="small" style="padding-left:18px">
+          <li>Não vendemos produtos — apenas conhecimento.</li>
+          <li>Sem anúncios invasivos.</li>
+          <li>Feito por voluntários.</li>
+        </ul>
+        <hr style="margin:12px 0"/>
+        <p class="small">Quer contribuir? <a href="#contato">Envie sugestões</a> ou participe como voluntário.</p>
+      </aside>
+    </section>
+
+    <section id="guias" style="margin-top:10px">
+      <h2>Guias Práticos</h2>
+      <p class="muted">Conteúdo rápido e aplicável para tutores e protetores.</p>
+      <div class="grid" style="margin-top:12px">
+        <article class="card">
+          <h3>Alimentação Saudável</h3>
+          <p class="small">O que oferecer, porções e alimentos a evitar. Checklist para escolher ração.</p>
+        </article>
+        <article class="card">
+          <h3>Higiene</h3>
+          <p class="small">Banho, escovação e cuidados com orelhas e unhas.</p>
+        </article>
+        <article class="card">
+          <h3>Saúde &amp; Prevenção</h3>
+          <p class="small">Vacinas, vermífugos e quando procurar o veterinário.</p>
+        </article>
+        <article class="card">
+          <h3>Adestramento</h3>
+          <p class="small">Técnicas de reforço positivo e resolver comportamentos comuns.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="adocao" style="margin-top:22px">
+      <h2>Adoção Responsável</h2>
+      <div class="adoption">
+        <div>
+          <div class="filter">
+            <span class="pill">Cachorro</span>
+            <span class="pill">Pequeno</span>
+            <span class="pill">Adulto</span>
+          </div>
+          <div class="gallery" id="gallery">
+            <div class="pet" data-name="Luna" data-age="2" data-size="pequeno" onclick="openModal(this)">
+              <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=60" alt="Cachorro para adoção - Luna">
+              <h4>Luna • 2 anos</h4>
+            </div>
+            <div class="pet" data-name="Tobias" data-age="4" data-size="medio" onclick="openModal(this)">
+              <img src="https://images.unsplash.com/photo-1558788353-f76d92427f16?auto=format&fit=crop&w=600&q=60" alt="Cachorro para adoção - Tobias">
+              <h4>Tobias • 4 anos</h4>
+            </div>
+            <div class="pet" data-name="Maya" data-age="1" data-size="pequeno" onclick="openModal(this)">
+              <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?auto=format&fit=crop&w=600&q=60" alt="Cachorro para adoção - Maya">
+              <h4>Maya • 1 ano</h4>
+            </div>
+            <div class="pet" data-name="Rex" data-age="6" data-size="grande" onclick="openModal(this)">
+              <img src="https://images.unsplash.com/photo-1470115636492-6d2b56f5e0d5?auto=format&fit=crop&w=600&q=60" alt="Cachorro para adoção - Rex">
+              <h4>Rex • 6 anos</h4>
+            </div>
+          </div>
+        </div>
+
+        <aside>
+          <div class="card">
+            <h3>Como adotar</h3>
+            <ol class="small">
+              <li>Preencha o formulário de interesse.</li>
+              <li>Entrevista com voluntários e visita domiciliar (quando aplicável).</li>
+              <li>Assinatura de termo de responsabilidade.</li>
+            </ol>
+            <p class="small">Para cadastrar um cão para adoção, <a href="#contato">entre em contato</a> com fotos e histórico.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="comunidade" style="margin-top:22px">
+      <h2>Comunidade</h2>
+      <div class="grid" style="margin-top:12px">
+        <div class="card">
+          <h3>Histórias de Adoção</h3>
+          <p class="small">Compartilhe sua história para inspirar outras pessoas.</p>
+        </div>
+        <div class="card">
+          <h3>Apoio a Protetores</h3>
+          <p class="small">Área para divulgação de resgates e necessidades.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contato" style="margin-top:22px;margin-bottom:40px">
+      <h2>Contato</h2>
+      <div class="card" style="padding:16px;display:flex;flex-direction:column;gap:12px">
+        <p class="small">Siga e envie mensagem: <a href="https://www.instagram.com/patinhas.cia">@patinhas.cia</a></p>
+        <form onsubmit="alert('Formulário de exemplo — configure envio no servidor ou via e-mail');return false;">
+          <input type="text" placeholder="Seu nome" required style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%"/>
+          <input type="email" placeholder="Seu e-mail" required style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%"/>
+          <textarea placeholder="Mensagem" rows="4" style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%"></textarea>
+          <div style="display:flex;gap:8px;margin-top:8px">
+            <button class="btn" type="submit">Enviar</button>
+            <button class="btn ghost" type="button" onclick="location.href='https://www.instagram.com/patinhas.cia'">Instagram</button>
+          </div>
+        </form>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="container">
+    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+      <div class="muted">© Patinhas &amp; Cia — Feito por voluntários</div>
+      <div class="muted">Créditos: Ilustrações Freepik • Fotos: parceiros</div>
+    </div>
+  </footer>
+
+  <div id="modal" class="modal" onclick="closeModal(event)">
+    <div class="inner" role="dialog" aria-modal="true">
+      <button onclick="closeModal(true)" style="float:right;border:none;background:transparent;font-size:18px;cursor:pointer">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-o9N1j7k6kQbVQx3u7k6V4nKc9kT4bY3x1Kp9a3s5ZQ4=" crossorigin=""></script>
+  <script>
+    function openModal(el){
+      const name = el.dataset.name || 'Animal';
+      const age = el.dataset.age || '?';
+      const size = el.dataset.size || '—';
+      const img = el.querySelector('img')?.src || '';
+      const content = `
+        <div style="display:flex;gap:12px;align-items:flex-start">
+          <img src="${img}" alt="${name}" style="width:220px;height:220px;object-fit:cover;border-radius:10px"/>
+          <div>
+            <h3 style="margin:0">${name}</h3>
+            <p class="small">Idade: ${age} anos<br/>Tamanho: ${size}</p>
+            <p class="small">Descrição: Animal vacinado, castrado (quando informado), perfil dócil. Para adotar, preencha o formulário de interesse.</p>
+            <p style="margin-top:8px"><button class="btn" onclick="location.href='#contato'">Tenho interesse</button></p>
+          </div>
+        </div>
+      `;
+      document.getElementById('modalContent').innerHTML = content;
+      document.getElementById('modal').classList.add('open');
+    }
+    function closeModal(e){
+      if(e === true || e.target?.id==='modal') document.getElementById('modal').classList.remove('open');
+    }
+
+    document.addEventListener('keydown', (ev)=>{ if(ev.key==='Escape') closeModal(true); });
+  </script>
+</body>
+</html>
