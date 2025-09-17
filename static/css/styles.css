@@ -59,11 +59,11 @@ nav a {
 
 /* Estilo do header fixo */
 #main-header {
-  position: fixed;
+  /* position: fixed; */
   top: 0;
   left: 0;
   right: 0;
-  background: var(--accent); /* Cor laranja */
+  background: var(--accent);
   color: white;
   padding: 20px;
   display: flex;

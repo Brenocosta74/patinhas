@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="../static/css/styles.css">
+  <title>Patinhas &amp; Cia</title>
+  <meta name="description" content="Comunidade gratuita dedicada aos cuidados de cães: guias, adoção, mapa de serviços e fórum." />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2T0vY7k7gq0XkYh0y5b2w6YbY1bYk2Jg2qj0Q4c=" crossorigin=""/>
+</head>
+<body>
+
+  <style>
+      .header-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+  }
+
+  .logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .logo-circle img {
+    width: 80px;       
+    height: 80px;        
+    border-radius: 50%;  
+    object-fit: cover;   
+  }
+
+  .logo-text {
+    font-size: 24px;    
+    color: var(--dark);  
+    font-weight: bold;   
+  }
+
+  .nav-menu {
+    position: absolute;
+    right: 20px;
+  }
+
+  #nav-toggle {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+  }
+  </style>
+
+<header id="main-header">
+  <div class="container header-inner">
+    <div class="logo-wrapper">
+      <div class="logo-circle"><img src="../static/imagens/patinhasLogo.jpeg" alt=""></div>
+      <strong class="logo-text">Patinhas &amp; Cia</strong>
+    </div>
+    <nav id="nav-menu" class="nav-menu">
+      <a href="login.html">Entrar</a>
+    </nav>
+    <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
+      <span class="hamburger"></span>
+    </button>
+  </div>
+</header>
+
+<main class="container">
+  <section class="hero">
+    <div class="hero-card">
+      <h1>Bem-vindo ao Patinhas &amp; Cia</h1>
+      <p>Aqui é um espaço feito com <em>carinho</em> para quem ama, cuida ou quer aprender a cuidar melhor dos cachorros. Conteúdo gratuito e acessível.</p>
+      <div class="cta-row">
+        <button class="btn" onclick="location.href='#guias'">Dicas &amp; Guias</button>
+        <button class="btn ghost" onclick="location.href='#adocao'">Adote um amigo</button>
+      </div>
+      <div class="grid" style="margin-top:18px">
+        <div class="card"><h3>Guias Práticos</h3><p class="small">Alimentação, higiene, saúde e adestramento — passos simples para cuidar melhor.</p>
+        <p class="small">Aprenda alguma dicas para o seu Pet. <br><br><a href="guia_pratico.html">Clique aqui para ver!!</a></p>
+        </div>
+        <div class="card"><h3>Adoção Responsável</h3><p class="small">Processo seguro, ONGs parceiras e como ser lar temporário.</p>
+        <p class="small">Adote um Pet conosco!!. <br><br><a href="adocao.html">Clique aqui para adotar!!</a></p>
+        </div>
+        <div class="card"><h3>Comunidade</h3><p class="small">Fórum, histórias e apoio a protetores.</p>
+        <p class="small">Compartilhe sua história para inspirar outras pessoas. <br><br><a href="historia.html">Clique aqui para compartilhar sua historia!!</a></p>
+        </div>
+        <div class="card"><h3>Serviços Uteis</h3><p class="small">Clínicas, pet shops e locais pet-friendly perto de você.</p>
+        <p class="small">Veja onde você pode encontrar alguns serviços pela cidade. <br><br><a href="servicos_uteis.html">Clique aqui para ver!!</a></p>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <h3>Nosso Compromisso</h3>
+      <ul class="small" style="padding-left:18px">
+        <li>Não vendemos produtos — apenas conhecimento.</li>
+        <li>Sem anúncios invasivos.</li>
+        <li>Feito por voluntários.</li>
+      </ul>
+  </section>
+
+
+<footer class="container">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div class="muted">© Patinhas &amp; Cia — Feito por voluntários</div>
+    <div class="muted">Créditos: Ilustrações Freepik • Fotos: parceiros</div>
+  </div>
+</footer>
+
+<script>
+  const navToggle = document.getElementById('nav-toggle');
+  const navMenu = document.getElementById('nav-menu');
+
+  navToggle.addEventListener('click', () => {
+    const isOpen = navMenu.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', isOpen);
+  });
+</script>
+
+</body>
+</html>

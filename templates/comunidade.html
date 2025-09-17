@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade - Patinhas & Cia</title>
+    <style>
+        :root {
+          --mint: #efd735;
+          --accent: #FF8A4B;
+          --dark: #233240;
+          --muted: #6b7b86;
+          --card: #ffffff;
+          --radius: 12px;
+          font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+        }
+
+        * {
+          box-sizing: border-box;
+        }
+
+        body {
+          margin: 0;
+          background: linear-gradient(180deg, var(--mint), #ffffff 40%);
+          color: var(--dark);
+          line-height: 1.5;
+          padding-top: 80px;
+        }
+
+        #main-header {
+          position: fixed;
+          top: 0;
+          left: 0;
+          right: 0;
+          background: var(--accent);
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+          z-index: 1000;
+        }
+
+        .header-inner {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 10px 20px;
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        .logo-wrapper {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+        }
+
+        .logo-circle {
+          background: white;
+          color: var(--accent);
+          width: 48px;
+          height: 48px;
+          border-radius: 50%;
+          font-size: 28px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-weight: 700;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo-text {
+          font-size: 22px;
+          font-weight: 800;
+          letter-spacing: 1px;
+        }
+
+        .nav-menu {
+          display: flex;
+          gap: 24px;
+        }
+
+        .nav-menu a {
+          color: white;
+          text-decoration: none;
+          font-weight: 600;
+          transition: opacity 0.3s ease;
+        }
+
+        .nav-menu a:hover {
+          opacity: 0.7;
+        }
+
+        #nav-toggle {
+          background: none;
+          border: none;
+          cursor: pointer;
+          display: none;
+          width: 30px;
+          height: 22px;
+          position: relative;
+          z-index: 1100;
+        }
+
+        .hamburger,
+        .hamburger::before,
+        .hamburger::after {
+          content: "";
+          display: block;
+          background: white;
+          height: 3px;
+          border-radius: 3px;
+          position: absolute;
+          width: 100%;
+          transition: all 0.3s ease;
+        }
+
+        .hamburger {
+          top: 50%;
+          transform: translateY(-50%);
+        }
+
+        .hamburger::before {
+          top: -8px;
+        }
+
+        .hamburger::after {
+          bottom: -8px;
+        }
+
+        .container {
+          max-width: 1100px;
+          margin: 0 auto;
+          padding: 0 20px;
+        }
+
+        .section {
+          background: var(--card);
+          border-radius: var(--radius);
+          padding: 28px;
+          margin-bottom: 24px;
+          box-shadow: 0 6px 18px rgba(35, 50, 64, 0.08);
+        }
+
+        h1, h2, h3 {
+          color: var(--dark);
+        }
+
+        .community-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+          gap: 24px;
+          margin-top: 20px;
+        }
+
+        .card {
+          background: var(--card);
+          padding: 24px;
+          border-radius: var(--radius);
+          box-shadow: 0 4px 12px rgba(35, 50, 64, 0.06);
+          border-left: 4px solid var(--accent);
+        }
+
+        .btn {
+          background: var(--accent);
+          border: none;
+          color: white;
+          padding: 10px 14px;
+          border-radius: 10px;
+          font-weight: 700;
+          cursor: pointer;
+          display: inline-block;
+          margin-top: 12px;
+          text-decoration: none;
+        }
+
+        footer {
+          padding: 28px 0;
+          color: var(--muted);
+          font-size: 14px;
+          text-align: center;
+          margin-top: 40px;
+        }
+
+        @media (max-width: 768px) {
+          .nav-menu {
+            position: fixed;
+            top: 60px;
+            right: -100%;
+            background: var(--accent);
+            flex-direction: column;
+            width: 200px;
+            padding: 20px;
+            height: calc(100vh - 60px);
+            gap: 16px;
+            transition: right 0.3s ease;
+          }
+
+          .nav-menu.open {
+            right: 0;
+          }
+
+          #nav-toggle {
+            display: block;
+          }
+          
+          .community-grid {
+            grid-template-columns: 1fr;
+          }
+        }
+    </style>
+</head>
+<body>
+    <header id="main-header">
+        <div class="header-inner">
+            <div class="logo-wrapper">
+                <div class="logo-circle">P</div>
+                <div class="logo-text">Patinhas & Cia</div>
+            </div>
+            <nav class="nav-menu">
+                <a href="index2.html">Início</a>
+                <a href="guia_pratico.html">Guia Prático</a>
+                <a href="comunidade.html">Comunidade</a>
+                <a href="servicos_uteis.html">Serviços Úteis</a>
+            </nav>
+            <button id="nav-toggle">
+                <span class="hamburger"></span>
+            </button>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="section">
+            <h2>Comunidade Patinhas & Cia</h2>
+            <p>Um espaço para se conectar, compartilhar e apoiar quem ama e cuida de cães.</p>
+        </div>
+        
+        <div class="community-grid">
+            <div class="card">
+                <h3>Fórum para troca de experiências</h3>
+                <p>Converse com outros tutores, tire dúvidas e compartilhe dicas sobre cuidados e comportamento dos cães.</p>
+                <a href="#" class="btn">Acessar o fórum</a>
+            </div>
+            
+            <div class="card">
+                <h3>Histórias de adoção</h3>
+                <p>Inspire-se com relatos emocionantes de cães que encontraram um lar cheio de amor.</p>
+                <a href="#" class="btn">Ver histórias</a>
+            </div>
+            
+            <div class="card">
+                <h3>Apoio a protetores independentes</h3>
+                <p>Descubra formas de ajudar quem cuida de cães resgatados e promove bem-estar animal.</p>
+                <a href="#" class="btn">Como ajudar</a>
+            </div>
+            
+            <div class="card">
+                <h3>Seja voluntário</h3>
+                <p>Saiba como dedicar seu tempo e fazer a diferença na vida de cães.</p>
+                <a href="#" class="btn">Tornar-se voluntário</a>
+            </div>
+        </div>
+        
+        <div class="section">
+            <h3>Participe da nossa comunidade</h3>
+            <p>Junte-se a outros amantes de cães para compartilhar experiências, aprender e apoiar uns aos outros. Nossa comunidade é um espaço seguro e acolhedor para todos que se importam com o bem-estar canino.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container">
+            <p>Patinhas & Cia - Todos os direitos reservados © 2023</p>
+            <p>Nosso compromisso: não vendemos produtos — apenas conhecimento. Sem anúncios invasivos. Feito por voluntários.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('nav-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-menu').classList.toggle('open');
+        });
+    </script>
+</body>
+</html>
