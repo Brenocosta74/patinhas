@@ -4,221 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Serviços Úteis - Patinhas & Cia</title>
-    <style>
-        :root {
-          --mint: #efd735;
-          --accent: #FF8A4B;
-          --dark: #233240;
-          --muted: #6b7b86;
-          --card: #ffffff;
-          --radius: 12px;
-          font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-
-        body {
-          margin: 0;
-          background: linear-gradient(180deg, var(--mint), #ffffff 40%);
-          color: var(--dark);
-          line-height: 1.5;
-          padding-top: 80px;
-        }
-
-        #main-header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          background: var(--accent);
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-          z-index: 1000;
-        }
-
-        .header-inner {
-          max-width: 1100px;
-          margin: 0 auto;
-          padding: 10px 20px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-        }
-
-        .logo-wrapper {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .logo-circle {
-          background: white;
-          color: var(--accent);
-          width: 48px;
-          height: 48px;
-          border-radius: 50%;
-          font-size: 28px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-weight: 700;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo-text {
-          font-size: 22px;
-          font-weight: 800;
-          letter-spacing: 1px;
-        }
-
-        .nav-menu {
-          display: flex;
-          gap: 24px;
-        }
-
-        .nav-menu a {
-          color: white;
-          text-decoration: none;
-          font-weight: 600;
-          transition: opacity 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-          opacity: 0.7;
-        }
-
-        #nav-toggle {
-          background: none;
-          border: none;
-          cursor: pointer;
-          display: none;
-          width: 30px;
-          height: 22px;
-          position: relative;
-          z-index: 1100;
-        }
-
-        .hamburger,
-        .hamburger::before,
-        .hamburger::after {
-          content: "";
-          display: block;
-          background: white;
-          height: 3px;
-          border-radius: 3px;
-          position: absolute;
-          width: 100%;
-          transition: all 0.3s ease;
-        }
-
-        .hamburger {
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        .hamburger::before {
-          top: -8px;
-        }
-
-        .hamburger::after {
-          bottom: -8px;
-        }
-
-        .container {
-          max-width: 1100px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-
-        .section {
-          background: var(--card);
-          border-radius: var(--radius);
-          padding: 28px;
-          margin-bottom: 24px;
-          box-shadow: 0 6px 18px rgba(35, 50, 64, 0.08);
-        }
-
-        h1, h2, h3 {
-          color: var(--dark);
-        }
-
-        .services-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 24px;
-        }
-
-        .service-card {
-          background: #fff8ee;
-          border-radius: var(--radius);
-          padding: 24px;
-          border-bottom: 4px solid var(--accent);
-        }
-
-        .location-list {
-          list-style-type: none;
-          padding: 0;
-        }
-
-        .location-list li {
-          background-color: rgba(255, 255, 255, 0.7);
-          margin-bottom: 12px;
-          padding: 12px;
-          border-radius: 8px;
-        }
-
-        footer {
-          padding: 28px 0;
-          color: var(--muted);
-          font-size: 14px;
-          text-align: center;
-          margin-top: 40px;
-        }
-
-        @media (max-width: 768px) {
-          .nav-menu {
-            position: fixed;
-            top: 60px;
-            right: -100%;
-            background: var(--accent);
-            flex-direction: column;
-            width: 200px;
-            padding: 20px;
-            height: calc(100vh - 60px);
-            gap: 16px;
-            transition: right 0.3s ease;
-          }
-
-          .nav-menu.open {
-            right: 0;
-          }
-
-          #nav-toggle {
-            display: block;
-          }
-          
-          .services-grid {
-            grid-template-columns: 1fr;
-          }
-        }
-    </style>
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
     <header id="main-header">
         <div class="header-inner">
             <div class="logo-wrapper">
-                <div class="logo-circle">P</div>
+              <div class="logo-circle"><img src="../static/imagens/patinhasLogo.jpeg" alt=""></div>
                 <div class="logo-text">Patinhas & Cia</div>
             </div>
             <nav class="nav-menu">
                 <a href="index2.html">Início</a>
-                <a href="guia_pratico.html">Guia Prático</a>
+                <a href="guia_pratico.html">Guias Práticos</a>
+                <a href="adocao.html">Adoção</a>
                 <a href="comunidade.html">Comunidade</a>
                 <a href="servicos_uteis.html">Serviços Úteis</a>
             </nav>
@@ -227,15 +25,15 @@
             </button>
         </div>
     </header>
-    
-    <div class="container">
-        <div class="section">
+
+    <main class="container">
+        <section class="hero-card section">
             <h2>Serviços Úteis em São Bernardo do Campo</h2>
             <p>Informações sobre serviços e locais que aceitam animais de estimação em São Bernardo do Campo.</p>
-        </div>
-        
-        <div class="services-grid">
-            <div class="service-card">
+        </section>
+
+        <div class="grid services-grid">
+            <div class="card service-card">
                 <h3>Clínicas Veterinárias</h3>
                 <p>Lista de clínicas confiáveis para consultas, vacinas e atendimentos de emergência, garantindo saúde e segurança para seu amigo.</p>
                 <ul class="location-list">
@@ -245,8 +43,8 @@
                     <li>Clínica Vet Life - Av. Lucas Nogueira Garcez, 101 - Centro</li>
                 </ul>
             </div>
-            
-            <div class="service-card">
+
+            <div class="card service-card">
                 <h3>Pets shops com preços acessíveis</h3>
                 <p>Opções de lojas que oferecem produtos de qualidade para cães, sem pesar no bolso.</p>
                 <ul class="location-list">
@@ -256,8 +54,8 @@
                     <li>Pet Value - Av. Senador Vergueiro, 112 - Centro</li>
                 </ul>
             </div>
-            
-            <div class="service-card">
+
+            <div class="card service-card">
                 <h3>Parques e locais pet-friendly</h3>
                 <p>Espaços ideais para passeios, socialização e diversão com seu cachorro em São Bernardo do Campo.</p>
                 <ul class="location-list">
@@ -268,17 +66,19 @@
                 </ul>
             </div>
         </div>
-        
-        <div class="section">
+
+        <section class="hero-card section">
             <h3>Dica importante</h3>
             <p>Antes de visitar qualquer estabelecimento, recomendamos ligar com antecedência para confirmar horários de funcionamento e políticas de atendimento para pets.</p>
-        </div>
-    </div>
-    
+        </section>
+    </main>
+
     <footer>
-        <div class="container">
-            <p>Patinhas & Cia - Todos os direitos reservados © 2023</p>
-            <p>Nosso compromisso: não vendemos produtos — apenas conhecimento. Sem anúncios invasivos. Feito por voluntários.</p>
+        <div class="footer-content">
+            <div class="muted">
+                <p>Patinhas & Cia - Todos os direitos reservados © 2025</p>
+                <p>Nosso compromisso: não vendemos produtos — apenas conhecimento. Sem anúncios invasivos. Feito por voluntários.</p>
+            </div>
         </div>
     </footer>
 

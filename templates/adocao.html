@@ -1,103 +1,105 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Adoção - Patinhas & Cia</title>
   <link rel="stylesheet" href="../static/css/styles.css">
-  <title>Adoção - Patinhas &amp; Cia</title>
-  <meta name="description" content="Adote um amigo com responsabilidade. Conheça os cães disponíveis para adoção." />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2T0vY7k7gq0XkYh0y5b2w6YbY1bYk2Jg2qj0Q4c=" crossorigin=""/>
-  <style>
-    .no-line{
-      text-decoration: none;
-    }
-  </style>
 </head>
 <body>
+
   <header id="main-header">
-    <div class="container header-inner">
+    <div class="header-inner">
       <div class="logo-wrapper">
-        <div class="logo-circle">🐾</div>
-        <strong class="logo-text"> <a class="no-line" href="index2.html"> Patinhas &amp; Cia</a></strong>
+        <div class="logo-circle"><img src="../static/imagens/patinhasLogo.jpeg" alt=""></div>
+        <div class="logo-text">Patinhas & Cia</div>
       </div>
+      <nav class="nav-menu">
+        <a href="index2.html">Início</a>
+                <a href="guia_pratico.html">Guias Práticos</a>
+                <a href="adocao.html">Adoção</a>
+                <a href="comunidade.html">Comunidade</a>
+                <a href="servicos_uteis.html">Serviços Úteis</a>
+      </nav>
+      <button id="nav-toggle">
+        <span class="hamburger"></span>
+      </button>
     </div>
   </header>
 
   <main class="container">
-    <section id="adocao" style="margin-top:22px">
+    <div class="section">
       <h2>Adoção Responsável</h2>
-      <div class="adoption">
-        <div>
-          <div class="gallery" id="gallery">
-            <!-- Pet 1 -->
-            <!-- <div class="pet" data-name="Luna" data-age="2" data-size="pequeno" onclick="openModal(this)">
-              <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=60" alt="Cachorro para adoção - Luna">
-              <h4>Luna • 2 anos</h4>
-            </div> -->
-          </div>
+      <p>Conheça nossos amigos disponíveis para adoção e saiba como tornar a vida deles mais feliz.</p>
+    </div>
+
+    <div class="adoption-section">
+      <div class="gallery">
+        <div class="size-card pet-card">
+          <img src="https://images.unsplash.com/photo-1518791841217-8f162f1e1131?auto=format&fit=crop&w=600&q=60" alt="Luna">
+          <h4>Luna • 2 anos</h4>
+          <p>Pequeno porte, saudável e brincalhona.</p>
         </div>
-
-        <aside>
-          <div class="card">
-            <h3>Como adotar</h3>
-            <ol class="small">
-              <li>Preencha o formulário de interesse.</li>
-              <li>Entrevista com voluntários e visita domiciliar (quando aplicável).</li>
-              <li>Assinatura de termo de responsabilidade.</li>
-            </ol>
-            <p class="small">Para cadastrar um cão para adoção, <a href="#contato">entre em contato</a> com fotos e histórico.</p>
-          </div>
-        </aside>
+        <div class="size-card pet-card">
+          <img src="https://images.unsplash.com/photo-1561948955-57013a33d15f?auto=format&fit=crop&w=600&q=60" alt="Thor">
+          <h4>Thor • 4 anos</h4>
+          <p>Médio porte, amigável e sociável com outros cães.</p>
+        </div>
       </div>
-    </section>
 
-      <section id="formulario-adoção" style="margin-top: 40px;">
-        <h3>Formulário de Adoção</h3>
-        <p>Preencha o formulário abaixo para manifestar seu interesse em adotar um de nossos amigos:</p>
-        <form onsubmit="alert('Formulário enviado'); return false;">
-<input type="text" placeholder="Seu nome" required style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%" />
-<input type="email" placeholder="Seu e-mail" required style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%" />
-<input type="text" placeholder="Nome do pet que gostaria de adotar" required style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%" />
-<input type="text" placeholder="Endereço" required style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%" />
+      <aside>
+        <div class="card">
+          <h3>Como adotar</h3>
+          <ol>
+            <li>Preencha o formulário de interesse abaixo.</li>
+            <li>Entrevista com voluntários e, quando aplicável, visita domiciliar.</li>
+            <li>Assinatura do termo de responsabilidade.</li>
+          </ol>
+          <p>Para cadastrar um cão para adoção, <a href="#formulario-adoção">entre em contato</a> com fotos e histórico.</p>
+        </div>
+      </aside>
+    </div>
 
-<label style="font-size:14px; margin-top:8px;">Sua casa tem espaço como quintal?</label>
-<select required style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%">
-  <option value="" disabled selected>Selecione uma opção</option>
-  <option value="sim">Sim</option>
-  <option value="nao">Não</option>
-</select>
+    <div class="section" id="formulario-adoção">
+      <h3>Formulário de Adoção</h3>
+      <p>Preencha os campos abaixo para manifestar interesse em adotar um de nossos amigos:</p>
+      <form class="form-adocao" onsubmit="alert('Formulário enviado com sucesso!'); return false;">
+        <input type="text" placeholder="Seu nome" required />
+        <input type="email" placeholder="Seu e-mail" required />
+        <input type="text" placeholder="Nome do pet que deseja adotar" required />
+        <input type="text" placeholder="Endereço completo" required />
 
-<label style="font-size:14px; margin-top:8px;">O pet pode fugir pelo portão?</label>
-<select required style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%">
-  <option value="" disabled selected>Selecione uma opção</option>
-  <option value="sim">Sim</option>
-  <option value="nao">Não</option>
-</select>
+        <label>Seu espaço possui quintal?</label>
+        <select required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+        </select>
 
-<textarea placeholder="Mensagem" rows="4" style="padding:10px;border-radius:8px;border:1px solid #eee;width:100%"></textarea>
+        <label>O pet pode fugir pelo portão?</label>
+        <select required>
+          <option value="" disabled selected>Selecione</option>
+          <option value="sim">Sim</option>
+          <option value="nao">Não</option>
+        </select>
 
-          <div style="display:flex;gap:8px;margin-top:8px">
-            <button class="btn" type="submit">Enviar</button>
-          </div>
-        </form>
-      </section>
-    </section>
+        <textarea placeholder="Mensagem adicional" rows="4"></textarea>
+
+        <button class="btn" type="submit">Enviar formulário</button>
+      </form>
+    </div>
   </main>
 
-  <footer class="container">
-    <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
-      <div class="muted">© Patinhas &amp; Cia — Feito por voluntários</div>
-      <div class="muted">Créditos: Ilustrações Freepik • Fotos: parceiros</div>
+  <footer>
+    <div class="container">
+      <p>Patinhas & Cia - Todos os direitos reservados © 2025</p>
+      <p>Nosso compromisso: não vendemos produtos — apenas conhecimento. Feito por voluntários.</p>
     </div>
   </footer>
 
   <script>
-    // Event listener para comportamento de navegação
-    document.querySelectorAll('.btn').forEach(button => {
-      button.addEventListener('click', (e) => {
-        e.preventDefault();
-        alert('Obrigado por demonstrar interesse na adoção!');
-      });
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('open');
     });
   </script>
 </body>

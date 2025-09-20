@@ -4,358 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guia Prático - Patinhas & Cia</title>
-    <style>
-        :root {
-          --mint: #efd735;
-          --accent: #FF8A4B;
-          --dark: #233240;
-          --muted: #6b7b86;
-          --card: #ffffff;
-          --radius: 12px;
-          font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-        }
-
-        * {
-          box-sizing: border-box;
-        }
-
-        body {
-          margin: 0;
-          background: linear-gradient(180deg, var(--mint), #ffffff 40%);
-          color: var(--dark);
-          line-height: 1.5;
-          padding-top: 80px;
-        }
-
-        #main-header {
-          position: fixed;
-          top: 0;
-          left: 0;
-          right: 0;
-          background: var(--accent);
-          color: white;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-          z-index: 1000;
-        }
-
-        .header-inner {
-          max-width: 1100px;
-          margin: 0 auto;
-          padding: 10px 20px;
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-          width: 100%;
-        }
-
-        .logo-wrapper {
-          display: flex;
-          align-items: center;
-          gap: 10px;
-        }
-
-        .logo-circle {
-          background: white;
-          color: var(--accent);
-          width: 48px;
-          height: 48px;
-          border-radius: 50%;
-          font-size: 28px;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          font-weight: 700;
-          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-        }
-
-        .logo-text {
-          font-size: 22px;
-          font-weight: 800;
-          letter-spacing: 1px;
-        }
-
-        .nav-menu {
-          display: flex;
-          gap: 24px;
-        }
-
-        .nav-menu a {
-          color: white;
-          text-decoration: none;
-          font-weight: 600;
-          transition: opacity 0.3s ease;
-        }
-
-        .nav-menu a:hover {
-          opacity: 0.7;
-        }
-
-        #nav-toggle {
-          background: none;
-          border: none;
-          cursor: pointer;
-          display: none;
-          width: 30px;
-          height: 22px;
-          position: relative;
-          z-index: 1100;
-        }
-
-        .hamburger,
-        .hamburger::before,
-        .hamburger::after {
-          content: "";
-          display: block;
-          background: white;
-          height: 3px;
-          border-radius: 3px;
-          position: absolute;
-          width: 100%;
-          transition: all 0.3s ease;
-        }
-
-        .hamburger {
-          top: 50%;
-          transform: translateY(-50%);
-        }
-
-        .hamburger::before {
-          top: -8px;
-        }
-
-        .hamburger::after {
-          bottom: -8px;
-        }
-
-        .container {
-          max-width: 1100px;
-          margin: 0 auto;
-          padding: 0 20px;
-        }
-
-        .section {
-          background: var(--card);
-          border-radius: var(--radius);
-          padding: 28px;
-          margin-bottom: 24px;
-          box-shadow: 0 6px 18px rgba(35, 50, 64, 0.08);
-        }
-
-        h1, h2, h3 {
-          color: var(--dark);
-        }
-
-        .guide-menu {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-          gap: 24px;
-          margin: 24px 0;
-        }
-
-        .guide-item {
-          background: #fff8ee;
-          border-radius: var(--radius);
-          padding: 24px;
-          text-align: center;
-          transition: transform 0.3s;
-          box-shadow: 0 4px 12px rgba(35, 50, 64, 0.06);
-        }
-
-        .guide-item:hover {
-          transform: translateY(-5px);
-        }
-
-        .size-guide {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-          gap: 24px;
-          margin: 24px 0;
-        }
-
-        .size-card {
-          background: #fff8ee;
-          border-radius: var(--radius);
-          padding: 24px;
-          border-top: 4px solid var(--accent);
-        }
-
-        .tip-box {
-          background-color: #e6f7ff;
-          border-left: 4px solid #1890ff;
-          padding: 20px;
-          margin: 20px 0;
-          border-radius: var(--radius);
-        }
-
-        footer {
-          padding: 28px 0;
-          color: var(--muted);
-          font-size: 14px;
-          text-align: center;
-          margin-top: 40px;
-        }
-
-        @media (max-width: 768px) {
-          .nav-menu {
-            position: fixed;
-            top: 60px;
-            right: -100%;
-            background: var(--accent);
-            flex-direction: column;
-            width: 200px;
-            padding: 20px;
-            height: calc(100vh - 60px);
-            gap: 16px;
-            transition: right 0.3s ease;
-          }
-
-          .nav-menu.open {
-            right: 0;
-          }
-
-          #nav-toggle {
-            display: block;
-          }
-          
-          .guide-menu, .size-guide {
-            grid-template-columns: 1fr;
-          }
-        }
-    </style>
+    <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
     <header id="main-header">
         <div class="header-inner">
             <div class="logo-wrapper">
-                <div class="logo-circle">P</div>
+              <div class="logo-circle"><img src="../static/imagens/patinhasLogo.jpeg" alt=""></div>
                 <div class="logo-text">Patinhas & Cia</div>
             </div>
             <nav class="nav-menu">
-                <a href="index2.html">Início</a>
-                <a href="guia_pratico.html">Guia Prático</a>
-                <a href="comunidade.html">Comunidade</a>
-                <a href="servicos_uteis.html">Serviços Úteis</a>
+              <a href="index2.html">Início</a>
+              <a href="guia_pratico.html">Guias Práticos</a>
+              <a href="adocao.html">Adoção</a>
+              <a href="comunidade.html">Comunidade</a>
+              <a href="servicos_uteis.html">Serviços Úteis</a>
             </nav>
             <button id="nav-toggle">
                 <span class="hamburger"></span>
             </button>
         </div>
     </header>
-    
-    <div class="container">
-        <div class="section">
+
+    <main class="container">
+        <section class="hero-card section">
             <h2>Guia Prático</h2>
             <p>Dicas essenciais sobre alimentação saudável, cuidados com higiene, saúde e prevenção de doenças, além de técnicas de adestramento.</p>
-            
-            <div class="guide-menu">
-                <div class="guide-item">
-                    <h3>Alimentação Saudável</h3>
-                    <p>Orientações nutricionais para todas as fases da vida do seu cão.</p>
-                </div>
-                <div class="guide-item">
-                    <h3>Higiene e Cuidados</h3>
-                    <p>Rotina completa de cuidados: banho, escovação, limpeza e muito mais.</p>
-                </div>
-                <div class="guide-item">
-                    <h3>Saúde e Prevenção</h3>
-                    <p>Aprenda a identificar sinais de doenças comuns.</p>
-                </div>
-                <div class="guide-item">
-                    <h3>Adestramento</h3>
-                    <p>Técnicas de adaptação positiva e reforço positivo.</p>
-                </div>
+        </section>
+
+        <div class="grid guide-menu">
+            <div class="card guide-item">
+                <h3>Alimentação Saudável</h3>
+                <p>Orientações nutricionais para todas as fases da vida do seu cão.</p>
+            </div>
+            <div class="card guide-item">
+                <h3>Higiene e Cuidados</h3>
+                <p>Rotina completa de cuidados: banho, escovação, limpeza e muito mais.</p>
+            </div>
+            <div class="card guide-item">
+                <h3>Saúde e Prevenção</h3>
+                <p>Aprenda a identificar sinais de doenças comuns.</p>
+            </div>
+            <div class="card guide-item">
+                <h3>Adestramento</h3>
+                <p>Técnicas de adaptação positiva e reforço positivo.</p>
             </div>
         </div>
-        
-        <div class="section">
-            <h2>Alimentação saudável para cães</h2>
-            <p>Dicas práticas de nutrição para filhotes, adultos e cães idosos, com orientações sobre porções, rações adequadas e alimentos seguros.</p>
-            
-            <h3>Filhotes (Até 1 ano)</h3>
-            <div class="size-guide">
-                <div class="size-card">
-                    <h4>Pequeno Porte</h4>
-                    <p>Crescem rápido, mas atingem o tamanho adulto mais cedo. Precisam de ração específica para filhotes de pequeno porte, com grãos menores e densidade calórica adequada.</p>
-                </div>
-                <div class="size-card">
-                    <h4>Médio Porte</h4>
-                    <p>Têm um crescimento mais moderado. A ração para filhotes de médio porte oferece os nutrientes necessários para um desenvolvimento equilibrado.</p>
-                </div>
-                <div class="size-card">
-                    <h4>Grande Porte</h4>
-                    <p>Crescem mais lentamente e por um período mais longo. É crucial usar ração para filhotes de grande porte, formulada para controlar o ritmo de crescimento.</p>
-                </div>
+
+        <section class="grid size-guide">
+            <div class="card size-card">
+                <h3>Filhotes (Pequeno Porte)</h3>
+                <p>Crescem rápido, mas atingem o tamanho adulto mais cedo. Ração específica para filhotes de pequeno porte.</p>
             </div>
-            
-            <h3>Adultos (De 1 a 7 anos, aproximadamente)</h3>
-            <div class="size-guide">
-                <div class="size-card">
-                    <h4>Pequeno Porte</h4>
-                    <p>Geralmente mais ativos e com metabolismo mais rápido. Precisam de ração para adultos de pequeno porte, que ajuda na manutenção do peso.</p>
-                </div>
-                <div class="size-card">
-                    <h4>Médio Porte</h4>
-                    <p>Necessitam de uma dieta balanceada para manter a energia e a massa muscular. A ração para adultos de médio porte é a mais indicada.</p>
-                </div>
-                <div class="size-card">
-                    <h4>Grande Porte</h4>
-                    <p>Têm um metabolismo mais lento e são mais propensos a problemas articulares. A ração para adultos de grande porte costuma ter níveis de gordura controlados.</p>
-                </div>
+            <div class="card size-card">
+                <h3>Filhotes (Médio Porte)</h3>
+                <p>Ração adequada para filhotes de médio porte, oferecendo nutrientes necessários para desenvolvimento equilibrado.</p>
             </div>
-            
-            <h3>Idosos (A partir de 7 anos, dependendo do porte)</h3>
-            <div class="size-guide">
-                <div class="size-card">
-                    <h4>Pequeno Porte</h4>
-                    <p>Podem desenvolver problemas dentários e renais. Rações para cães idosos de pequeno porte são geralmente mais palatáveis, com menos calorias.</p>
-                </div>
-                <div class="size-card">
-                    <h4>Médio Porte</h4>
-                    <p>Precisam de dietas que apoiem a função renal, cardíaca e articular. Ração sênior para médio porte é formulada com esses objetivos em mente.</p>
-                </div>
-                <div class="size-card">
-                    <h4>Grande Porte</h4>
-                    <p>São particularmente propensos a problemas articulares e cardíacos. Rações para cães idosos de grande porte costumam ter menos fósforo e sódio.</p>
-                </div>
+            <div class="card size-card">
+                <h3>Filhotes (Grande Porte)</h3>
+                <p>Ração para filhotes de grande porte, formulada para controlar ritmo de crescimento.</p>
             </div>
-            
-            <div class="tip-box">
-                <h4>Observações importantes:</h4>
-                <ul>
-                    <li><strong>Qualidade da Ração:</strong> Opte sempre por rações de alta qualidade.</li>
-                    <li><strong>Quantidade:</strong> Siga as recomendações da embalagem, ajustando conforme necessidade.</li>
-                    <li><strong>Água Fresca:</strong> Mantenha sempre água fresca e limpa disponível.</li>
-                    <li><strong>Consulta Veterinária:</strong> Sempre consulte um veterinário para a alimentação ideal.</li>
-                    <li><strong>Petiscos:</strong> Ofereça petiscos com moderação.</li>
-                </ul>
+        </section>
+
+        <section class="grid size-guide">
+            <div class="card size-card">
+                <h3>Adultos (Pequeno Porte)</h3>
+                <p>Ração para adultos de pequeno porte, ajudando na manutenção do peso.</p>
             </div>
-        </div>
-        
-        <div class="section">
+            <div class="card size-card">
+                <h3>Adultos (Médio Porte)</h3>
+                <p>Dieta balanceada para manter energia e massa muscular.</p>
+            </div>
+            <div class="card size-card">
+                <h3>Adultos (Grande Porte)</h3>
+                <p>Níveis de gordura controlados para prevenir problemas articulares.</p>
+            </div>
+        </section>
+
+        <section class="grid size-guide">
+            <div class="card size-card">
+                <h3>Idosos (Pequeno Porte)</h3>
+                <p>Rações mais palatáveis, com menos calorias, ajudam a prevenir problemas dentários e renais.</p>
+            </div>
+            <div class="card size-card">
+                <h3>Idosos (Médio Porte)</h3>
+                <p>Dieta que apoia função renal, cardíaca e articular.</p>
+            </div>
+            <div class="card size-card">
+                <h3>Idosos (Grande Porte)</h3>
+                <p>Rações com menos fósforo e sódio para proteger articulações e coração.</p>
+            </div>
+        </section>
+
+        <section class="hero-card section tip-box">
+            <h3>Observações importantes</h3>
+            <ul>
+                <li><strong>Qualidade da Ração:</strong> Opte sempre por rações de alta qualidade.</li>
+                <li><strong>Quantidade:</strong> Ajuste conforme necessidade.</li>
+                <li><strong>Água Fresca:</strong> Sempre disponível.</li>
+                <li><strong>Consulta Veterinária:</strong> Sempre consulte um veterinário.</li>
+                <li><strong>Petiscos:</strong> Com moderação.</li>
+            </ul>
+        </section>
+
+        <section class="hero-card section">
             <h2>Higiene e cuidados diários</h2>
             <p>Rotina completa de cuidados: banho, escovação, limpeza de dentes, corte de unhas.</p>
-            
-            <h3>Higiene Dental</h3>
-            <p>A escovação dos dentes deve ser regular, idealmente diária, com pasta e escova específicas para cães.</p>
-            
-            <h3>Banhos e Pelagem</h3>
-            <p>A frequência de banhos varia conforme o porte do cão. A escovação regular é importante para remover pelos mortos e evitar nós.</p>
-            
-            <h3>Limpeza das Orelhas</h3>
-            <p>As orelhas devem ser inspecionadas e limpas regularmente com produtos específicos.</p>
-            
-            <h3>Corte de Unhas</h3>
-            <p>As unhas devem ser cortadas quando tocam o chão, para evitar que cresçam demais.</p>
-        </div>
-    </div>
-    
+        </section>
+    </main>
+
     <footer>
-        <div class="container">
-            <p>Patinhas & Cia - Todos os direitos reservados © 2023</p>
-            <p>Nosso compromisso: não vendemos produtos — apenas conhecimento. Sem anúncios invasivos. Feito por voluntários.</p>
+        <div class="footer-content">
+            <div class="muted">
+                <p>Patinhas & Cia - Todos os direitos reservados © 2025</p>
+                <p>Nosso compromisso: não vendemos produtos — apenas conhecimento. Sem anúncios invasivos. Feito por voluntários.</p>
+            </div>
         </div>
     </footer>
 

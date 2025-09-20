@@ -1,102 +1,35 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Página de Login</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --mint: #efd735;
-      --accent: #FF8A4B;
-      --dark: #233240;
-      --muted: #6b7b86;
-      --card: #ffffff;
-      --radius: 12px;
-      font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
-    }
-
-    * {
-      box-sizing: border-box;
-    }
-
-    body {
-      margin: 0;
-      background: linear-gradient(180deg, var(--mint), #ffffff 40%);
-      color: var(--dark);
-      line-height: 1.5;
-      font-family: 'Inter', sans-serif;
-    }
-
-    .container {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-    }
-
-    .login-card {
-      background: var(--card);
-      border-radius: var(--radius);
-      padding: 40px;
-      box-shadow: 0 6px 18px rgba(35, 50, 64, 0.08);
-      width: 100%;
-      max-width: 400px;
-    }
-
-    .login-card h2 {
-      font-size: 24px;
-      margin-bottom: 24px;
-      color: var(--dark);
-      text-align: center;
-    }
-
-    .input-group {
-      margin-bottom: 16px;
-    }
-
-    .input-group label {
-      font-weight: 600;
-      margin-bottom: 6px;
-      display: block;
-      color: var(--dark);
-    }
-
-    .input-group input {
-      width: 100%;
-      padding: 10px;
-      border-radius: var(--radius);
-      border: 1px solid #ddd;
-      font-size: 16px;
-      outline: none;
-    }
-
-    .input-group input:focus {
-      border-color: var(--accent);
-    }
-
-    .btn {
-      background: var(--accent);
-      border: none;
-      color: white;
-      padding: 12px;
-      border-radius: var(--radius);
-      width: 100%;
-      font-weight: 700;
-      cursor: pointer;
-      margin-top: 20px;
-    }
-
-    .btn:hover {
-      opacity: 0.9;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - Patinhas & Cia</title>
+  <link rel="stylesheet" href="../static/css/styles.css">
 </head>
 <body>
 
-  <div class="container">
-    <div class="login-card">
-      <h2>Entrar</h2>
+  <header id="main-header">
+    <div class="header-inner">
+      <div class="logo-wrapper">
+        <div class="logo-circle"><img src="../static/imagens/patinhasLogo.jpeg" alt=""></div>
+        <div class="logo-text">Patinhas & Cia</div>
+      </div>
+      <nav class="nav-menu">
+        <a href="index2.html">Início</a>
+                <a href="guia_pratico.html">Guias Práticos</a>
+                <a href="adocao.html">Adoção</a>
+                <a href="comunidade.html">Comunidade</a>
+                <a href="servicos_uteis.html">Serviços Úteis</a>
+      </nav>
+      <button id="nav-toggle">
+        <span class="hamburger"></span>
+      </button>
+    </div>
+  </header>
+
+  <div class="container" style="display:flex; justify-content:center; align-items:center; min-height: calc(100vh - 80px); padding:20px;">
+    <div class="login-card" style="max-width:400px; width:100%; padding:40px; background: var(--card); border-radius:var(--radius); box-shadow:0 6px 18px rgba(35,50,64,0.08);">
+      <h2 style="text-align:center; color:var(--dark); margin-bottom:24px;">Entrar</h2>
       <form action="#" method="POST">
         <div class="input-group">
           <label for="email">E-mail</label>
@@ -110,6 +43,19 @@
       </form>
     </div>
   </div>
+
+  <footer>
+    <div class="container">
+      <p>Patinhas & Cia - Todos os direitos reservados © 2025</p>
+      <p>Nosso compromisso: não vendemos produtos — apenas conhecimento. Feito por voluntários.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('nav-toggle').addEventListener('click', function() {
+      document.querySelector('.nav-menu').classList.toggle('open');
+    });
+  </script>
 
 </body>
 </html>

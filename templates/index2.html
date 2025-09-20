@@ -6,57 +6,19 @@
   <link rel="stylesheet" href="../static/css/styles.css">
   <title>Patinhas &amp; Cia</title>
   <meta name="description" content="Comunidade gratuita dedicada aos cuidados de cães: guias, adoção, mapa de serviços e fórum." />
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-sA+e2T0vY7k7gq0XkYh0y5b2w6YbY1bYk2Jg2qj0Q4c=" crossorigin=""/>
 </head>
 <body>
-
-  <style>
-      .header-inner {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-  }
-
-  .logo-wrapper {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-  }
-
-  .logo-circle img {
-    width: 80px;       
-    height: 80px;        
-    border-radius: 50%;  
-    object-fit: cover;   
-  }
-
-  .logo-text {
-    font-size: 24px;    
-    color: var(--dark);  
-    font-weight: bold;   
-  }
-
-  .nav-menu {
-    position: absolute;
-    right: 20px;
-  }
-
-  #nav-toggle {
-    position: absolute;
-    right: 10px;
-    top: 10px;
-  }
-  </style>
 
 <header id="main-header">
   <div class="container header-inner">
     <div class="logo-wrapper">
-      <div class="logo-circle"><img src="../static/imagens/patinhasLogo.jpeg" alt=""></div>
+      <div class="logo-circle">
+        <img src="../static/imagens/patinhasLogo.jpeg" alt="Logo Patinhas & Cia">
+      </div>
       <strong class="logo-text">Patinhas &amp; Cia</strong>
     </div>
     <nav id="nav-menu" class="nav-menu">
-      <a href="login.html">Entrar</a>
+      <a href="login.html">Entrar/Cadastro</a>
     </nav>
     <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
       <span class="hamburger"></span>
@@ -65,59 +27,59 @@
 </header>
 
 <main class="container">
-  <section class="hero">
+
+  <div class="row-large-cards">
     <div class="hero-card">
       <h1>Bem-vindo ao Patinhas &amp; Cia</h1>
       <p>Aqui é um espaço feito com <em>carinho</em> para quem ama, cuida ou quer aprender a cuidar melhor dos cachorros. Conteúdo gratuito e acessível.</p>
-      <div class="grid" style="margin-top:18px">
-        <div class="card"><h3>Guias Práticos</h3><p class="small">Alimentação, higiene, saúde e adestramento — passos simples para cuidar melhor.</p>
-        <p class="small">Aprenda alguma dicas para o seu Pet. <br><br><a href="guia_pratico.html">Clique aqui para ver!!</a></p>
-        </div>
-        <div class="card"><h3>Adoção Responsável</h3><p class="small">Processo seguro, ONGs parceiras e como ser lar temporário.</p>
-        <p class="small">Adote um Pet conosco!!. <br><br><a href="adocao.html">Clique aqui para adotar!!</a></p>
-        </div>
-        <div class="card"><h3>Comunidade</h3><p class="small">Fórum, histórias e apoio a protetores.</p>
-        <p class="small">Compartilhe sua história para inspirar outras pessoas. <br><br><a href="historia.html">Clique aqui para compartilhar sua historia!!</a></p>
-        </div>
-        <div class="card"><h3>Serviços Uteis</h3><p class="small">Clínicas, pet shops e locais pet-friendly perto de você.</p>
-        <p class="small">Veja onde você pode encontrar alguns serviços pela cidade. <br><br><a href="servicos_uteis.html">Clique aqui para ver!!</a></p>
-        </div>
-      </div>
     </div>
-
-    <aside class="hero-card">
+    <div class="hero-card">
       <h3>Nosso Compromisso</h3>
-      <ul class="small" style="padding-left:18px">
+      <ul>
         <li>Não vendemos produtos — apenas conhecimento.</li>
         <li>Sem anúncios invasivos.</li>
         <li>Feito por voluntários.</li>
       </ul>
-  </section>
+    </div>
+  </div>
+  
+  <div class="row-small-cards">
+    <div class="card">
+      <h3>Guias Práticos</h3>
+      <p class="small">Alimentação, higiene, saúde e adestramento — passos simples para cuidar melhor.</p>
+      <p class="small"><a href="guia_pratico.html">Clique aqui para ver!!</a></p>
+    </div>
+    <div class="card">
+      <h3>Adoção Responsável</h3>
+      <p class="small">Processo seguro, ONGs parceiras e como ser lar temporário.</p>
+      <p class="small"><a href="adocao.html">Clique aqui para adotar!!</a></p>
+    </div>
+    <div class="card">
+      <h3>Comunidade</h3>
+      <p class="small">Fórum, histórias e apoio a protetores.</p>
+      <p class="small"><a href="comunidade.html">Clique aqui para compartilhar sua história!!</a></p>
+    </div>
+    <div class="card">
+      <h3>Serviços Úteis</h3>
+      <p class="small">Clínicas, pet shops e locais pet-friendly perto de você.</p>
+      <p class="small"><a href="servicos_uteis.html">Clique aqui para ver!!</a></p>
+    </div>
+  </div>
+
 </main>
 
 <footer>
   <div class="footer-content">
     <div class="muted">
       <img src="../static/imagens/insta.png" alt="Instagram" width="40px" />
-      <a
-        href="https://www.instagram.com/patinhas.cia?igsh=bHp5NnkxajlrMHlq"
-        target="_blank"
-      >
-        @patinhas.cia
-      </a>
+      <a href="https://www.instagram.com/patinhas.cia" target="_blank">@patinhas.cia</a>
     </div>
-
-          <div class="muted">© Patinhas &amp; Cia — Feito por voluntários</div>
+    <div class="muted">© Patinhas &amp; Cia — Feito por voluntários</div>
     <div class="copyright-and-paws">
-<div class="paws" style="font-size: 48px;">
-  🐾
-</div>
-
+      <div class="paws">🐾</div>
     </div>
   </div>
 </footer>
-
-
 
 <script>
   const navToggle = document.getElementById('nav-toggle');
