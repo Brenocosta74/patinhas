@@ -291,6 +291,7 @@ footer {
 .paws {
   display: flex;
   gap: 8px;
+  font-size: 50px;
 }
 
 .paws svg {
