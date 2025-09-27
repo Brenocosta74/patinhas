@@ -206,6 +206,11 @@ main.container {
   box-shadow: 0 12px 28px rgba(35, 50, 64, 0.12);
 }
 
+.small {
+  font-size: 14px;
+  color: var(--muted);
+  }
+
 /* Linha de cards menores */
 .row-small-cards {
   display: grid;
@@ -324,4 +329,60 @@ footer {
     align-items: flex-start;
     gap: 8px;
   }
+}
+
+/* Card "Nosso Compromisso" */
+.compromisso-card {
+  /* Fundo laranja claro */
+  background-color: #f7e0c4; 
+  
+  /* Padding e border-radius */
+  padding: 16px;
+  border-radius: var(--radius); /* 12px */
+  
+  /* 💥 NOVO: Borda Lateral Laranja 💥 */
+  /* Usa a cor laranja do seu site (--accent: #FF8A4B) */
+  border-left: 5px solid var(--accent); 
+  
+  /* Sombra mais escura e visível (mantendo a Opção 1) */
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15); 
+}
+
+/* Título */
+.compromisso-card h3 {
+  margin-top: 0;
+  margin-bottom: 8px;
+  color: var(--dark);
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+/* Lista */
+.lista-compromisso {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 15px; 
+  color: var(--dark);
+}
+
+/* Item da Lista (LI) */
+.lista-compromisso li {
+  position: relative;
+  /* Ajuste o padding-left para compensar a borda do card */
+  padding-left: 20px; 
+  margin-bottom: 6px;
+  line-height: 1.4;
+}
+
+/* Checkmark Laranja (✓) */
+.lista-compromisso li::before {
+  content: '\2713'; 
+  color: var(--accent); /* #FF8A4B */
+  position: absolute;
+  left: 0;
+  top: 0;
+  font-size: 1.2em; 
+  font-weight: bold;
 }
