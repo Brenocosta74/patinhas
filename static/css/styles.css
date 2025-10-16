@@ -100,6 +100,18 @@ body {
   gap: 12px;
 }
 
+ .btn  {
+    background-color: #ff8a4b;
+    border-radius: 10px;
+    font-size: 1rem;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    margin: 30px;
+    display: inline-block;
+    color: #ffffff;
+  }
+
+
 .nav-menu a {
   display: inline-block;
   padding: 8px 16px;
@@ -222,7 +234,7 @@ main.container {
 .card {
   background: var(--card);
   padding: 16px;
-  border-radius: 12px;
+  border-radius: 50px;
   box-shadow: 0 4px 12px rgba(35, 50, 64, 0.06);
 }
 
