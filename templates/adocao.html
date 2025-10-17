@@ -68,6 +68,41 @@
 .close:hover {
   color: #000;
 }
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.pet-thumbnail {
+  width: 300px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+  background-color: #fff;
+}
+
+.pet-thumbnail img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.pet-thumbnail h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.pet-thumbnail p {
+  color: #666;
+  font-size: 0.9em;
+  margin-bottom: 10px;
+}
+
+
 </style>
 
 <body>
@@ -97,7 +132,7 @@
     <h2>Adoção Responsável</h2>
     <p>Adotar é um ato de amor e responsabilidade. Cada cachorro disponível para adoção tem uma história e está à espera de uma nova chance de ser feliz. Ao escolher adotar, você não apenas ganha um companheiro leal, mas também transforma uma vida, oferecendo carinho, cuidado e um lar de verdade.</p>
   </section>
-
+<br>
   <section class="hero-card section">
     <h2>Processo de Adoção Seguro</h2>
     <p>Saiba como seguir etapas confiáveis, garantindo que a adoção seja segura para você e para o cachorro.</p>
@@ -116,7 +151,7 @@
     <h3>ONGs e abrigos parceiros</h3>
     <p>Conheça instituições comprometidas com o bem-estar animal, onde você pode encontrar cães à espera de um lar amoroso.</p>
   </section>
-
+<br>
   <section class="hero-card section">
     <h2>Como ser um lar temporário</h2>
     <p>Aprenda a acolher cães temporariamente, oferecendo cuidados e carinho enquanto esperam pela adoção definitiva.</p>
@@ -148,7 +183,7 @@
       <li><strong>Semana 4:</strong> Fotos, relatório e avaliação de saúde.</li>
     </ul>
   </section>
-
+<br>
   <section class="hero-card section">
     <h2>Preparação para a Adoção</h2>
     <p>Dicas práticas para preparar sua casa e rotina, garantindo que o novo amigo se adapte com conforto e segurança.</p>
@@ -160,32 +195,78 @@
       <li><strong>Envolvimento familiar:</strong> Todos os membros da família devem estar preparados para participar do cuidado e aprendizado com o novo amigo.</li>
     </ul>
   </section>
-
+<br>
   <section class="hero-card section">
     <h2>Adote</h2>
     <p>Adotar é um ato de amor que transforma vidas, oferecendo carinho e um novo começo para quem precisa.</p>
   </section>
 
-    <div class="pet-thumbnail" onclick="openModal('Tobias', '4 anos', 'médio', 'Animal vacinado, castrado (quando informado), perfil dócil. Para adotar, preencha o formulário de interesse.')">
-  <img src="../static/imagens/charlie.png" alt="Tobias" width="300px">
-  <h4>Luna • 2 anos</h4>
-  <p>Pequeno porte, saudável e brincalhona.</p>
+
+<!-- Pet 1: Tobias -->
+<div class="pet-thumbnail" onclick="openModal('Tobias', '3 Meses', 'Médio', 'Animal vacinado, castrado (quando informado), perfil dócil. Para adotar, preencha o formulário de interesse.', 'Tobias')">
+  <h3>Tobias • 3 Meses</h3>
+  <p>Porte médio, saudável e brincalhão.</p>
+  <img src="../static/imagens/Tobias.jpeg" alt="Tobias" width="300px">
 </div>
 
-<!-- Modal -->
-<div id="petModal" class="modal">
+<div id="petModal-Tobias" class="modal">
   <div class="modal-content">
-    <span class="close" onclick="closeModal()">&times;</span>
+    <span class="close" onclick="closeModal('Tobias')">&times;</span>
     <div class="modal-body">
-      <img id="modalImg" src="../static/imagens/charlie.png" alt="Pet" />
-      <h2 id="modalName">Luna</h2>
-      <p><strong>Idade:</strong> <span id="modalAge">2 anos</span></p>
-      <p><strong>Tamanho:</strong> <span id="modalSize">Pequeno</span></p>
-      <p id="modalDesc">Animal vacinado, castrado (quando informado), perfil dócil, brincalhona. Para adotar, preencha o formulário de interesse.</p>
+      <img id="modalImg-Tobias" src="../static/imagens/Tobias.jpeg" alt="Pet" />
+      <h2 id="modalName-Tobias">Tobias</h2>
+      <p><strong>Idade:</strong> <span id="modalAge-Tobias">3 Meses</span></p>
+      <p><strong>Porte:</strong> <span id="modalSize-Tobias">Médio</span></p>
+      <p id="modalDesc-Tobias">Animal vacinado, castrado (quando informado), perfil dócil, brincalhão. Para adotar, preencha o formulário de interesse.</p>
       <button class="btn" onclick="location.href='#formulario-adoção'">Tenho interesse</button>
     </div>
   </div>
 </div>
+
+<!-- Pet 2: Luna -->
+<div class="pet-thumbnail" onclick="openModal('Luna', '5 Meses', 'Pequeno', 'Animal vacinada, castrada (quando informado), perfil dócil. Para adotar, preencha o formulário de interesse.', 'Luna')">
+  <h3>Luna • 5 Meses</h3>
+  <p>Porte Pequeno, saudável e carinhosa.</p>
+  <img src="../static/imagens/Luna.jpeg" alt="Luna" width="300px">
+</div>
+
+<div id="petModal-Luna" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('Luna')">&times;</span>
+    <div class="modal-body">
+      <img id="modalImg-Luna" src="../static/imagens/Luna.jpeg" alt="Pet" />
+      <h2 id="modalName-Luna">Luna</h2>
+      <p><strong>Idade:</strong> <span id="modalAge-Luna">5 Meses</span></p>
+      <p><strong>Porte:</strong> <span id="modalSize-Luna">Pequeno</span></p>
+      <p id="modalDesc-Luna">Animal vacinada, castrada (quando informado), perfil dócil e carinhosa. Para adotar, preencha o formulário de interesse.</p>
+      <button class="btn" onclick="location.href='#formulario-adoção'">Tenho interesse</button>
+    </div>
+  </div>
+</div>
+
+<!-- Pet 3: Thor -->
+<div class="pet-thumbnail" onclick="openModal('Thor', '3 Meses', 'Pequeno', 'Animal vacinado, castrado (quando informado), perfil dócil. Para adotar, preencha o formulário de interesse.', 'Thor')">
+  <h3>Thor • 3 Meses</h3>
+  <p>Porte pequeno, saudável e curioso.</p>
+  <img src="../static/imagens/Thor.jpeg" alt="Thor" width="300px">
+</div>
+
+<div id="petModal-Thor" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('Thor')">&times;</span>
+    <div class="modal-body">
+      <img id="modalImg-Thor" src="../static/imagens/Thor.jpeg" alt="Pet" />
+      <h2 id="modalName-Thor">Thor</h2>
+      <p><strong>Idade:</strong> <span id="modalAge-Thor">3 Meses</span></p>
+      <p><strong>Porte:</strong> <span id="modalSize-Thor">Pequeno</span></p>
+      <p id="modalDesc-Thor">Animal vacinado, castrado (quando informado), perfil dócil e curioso, preencha o formulário de interesse.</p>
+      <button class="btn" onclick="location.href='#formulario-adoção'">Tenho interesse</button>
+    </div>
+  </div>
+</div>
+
+
+
 
     <aside>
       <div class="card">
@@ -239,27 +320,27 @@
 </footer>
 
 <script>
-  document.getElementById('nav-toggle').addEventListener('click', function() {
-    document.querySelector('.nav-menu').classList.toggle('open');
-  });
-  function openModal(name, age, size, desc) {
-  document.getElementById('modalName').textContent = name;
-  document.getElementById('modalAge').textContent = age;
-  document.getElementById('modalSize').textContent = size;
-  document.getElementById('modalDesc').textContent = desc;
-  document.getElementById('petModal').style.display = 'block';
+function openModal(name, age, size, desc, pet) {
+  document.getElementById('modalName-' + pet).textContent = name;
+  document.getElementById('modalAge-' + pet).textContent = age;
+  document.getElementById('modalSize-' + pet).textContent = size;
+  document.getElementById('modalDesc-' + pet).textContent = desc;
+  document.getElementById('petModal-' + pet).style.display = 'block';
 }
 
-function closeModal() {
-  document.getElementById('petModal').style.display = 'none';
+function closeModal(pet) {
+  document.getElementById('petModal-' + pet).style.display = 'none';
 }
 
-// Fecha o modal se clicar fora do conteúdo
 window.onclick = function(event) {
-  if (event.target == document.getElementById('petModal')) {
-    closeModal();
-  }
+  const modals = document.querySelectorAll('.modal');
+  modals.forEach(modal => {
+    if (event.target == modal) {
+      closeModal(modal.id.split('-')[1]);
+    }
+  });
 }
+
 </script>
 
 </body>
