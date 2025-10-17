@@ -163,28 +163,32 @@ body {
   bottom: -8px;
 }
 
-/* Responsividade menu */
 @media (max-width: 768px) {
-  .nav-menu {
-    top: 60px;
-    right: -100%;
-    background: var(--accent);
-    flex-direction: column;
-    width: 200px;
-    padding: 20px;
-    height: calc(100vh - 60px);
-    gap: 16px;
-    transition: right 0.3s ease;
-  }
+      .nav-menu {
+        position: fixed;
+        top: 60px;
+        right: -100%;
+        background: var(--accent);
+        flex-direction: column;
+        width: 200px;
+        padding: 20px;
+        height: calc(100vh - 60px);
+        gap: 16px;
+        transition: right 0.3s ease;
+      }
 
-  .nav-menu.open {
-    right: 0;
-  }
+      .nav-menu.open {
+        right: 0;
+      }
 
-  #nav-toggle {
-    display: block;
-  }
-}
+      #nav-toggle {
+        display: block;
+      }
+      
+      .guide-menu, .size-guide {
+        grid-template-columns: 1fr;
+      }
+    }
 
 /* Main */
 main.container {
