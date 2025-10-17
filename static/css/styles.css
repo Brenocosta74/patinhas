@@ -171,7 +171,6 @@ body {
 /* Responsividade menu */
 @media (max-width: 768px) {
   .nav-menu {
-    position: fixed;
     top: 60px;
     right: -100%;
     background: var(--accent);
@@ -267,15 +266,13 @@ form input, form select, form textarea, form button {
 }
 
 /* Footer */
-footer {
-  width: 100%;
-  background: linear-gradient(135deg, #ff8a4b, #ffb380);
-  padding: 40px 20px;
-  margin-top: 60px;
-  box-shadow: 0 -3px 8px rgba(0, 0, 0, 0.1);
-  color: white;
-  min-height: 120px;
-}
+    footer {
+      padding: 28px 0;
+      color: var(--muted);
+      font-size: 14px;
+      text-align: center;
+      margin-top: 40px;
+    }
 
 .footer-content {
   display: flex;
