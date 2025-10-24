@@ -7,6 +7,56 @@
   <title>Patinhas & Cia</title>
   <meta name="description" content="Comunidade gratuita dedicada aos cuidados de cães: guias, adoção, mapa de serviços e fórum." />
   <style>
+    #main-header 
+    { background: var(--accent);
+      color: white;
+      padding: 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center; 
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15); 
+      position: relative; 
+    } 
+    .header-inner { max-width: 1100px; 
+      margin: 0 auto; 
+      padding: 0; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      width: 100%; 
+    } 
+    .logo-wrapper 
+    { display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 16px; 
+    } 
+    .logo-circle 
+    { 
+      background: white; 
+      color: var(--accent); 
+      width: 70px; 
+      height: 70px; 
+      border-radius: 50%; 
+      overflow: hidden; 
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1); 
+    } 
+    .logo-text { 
+      font-size: 28px; 
+      font-weight: bold; 
+      color: white; 
+    } 
+    #nav-toggle { 
+      background: none; 
+      border: none; 
+      cursor: pointer; 
+      display: none; 
+      width: 30px; 
+      height: 22px; 
+      position: relative; 
+      z-index: 1100; 
+    }
+    
     .row-small-cards {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
@@ -103,7 +153,6 @@
       <strong class="logo-text">Patinhas & Cia</strong>
     </div>
     <button id="nav-toggle" aria-label="Abrir menu" aria-expanded="false">
-      <span class="hamburger"></span>
     </button>
   </div>
 </header>
